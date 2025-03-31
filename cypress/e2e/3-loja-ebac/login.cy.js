@@ -57,4 +57,12 @@ describe('', () => {
 
     });
 
+    it.only('Deve fazer login com sucesso - Usando Comandos Customizados', () => {
+        cy.login('larissa.teste@teste.com.br', 'teste@123')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, larissa.teste (não é larissa.teste? Sair)')
+    });
+
+
 });
+
+
